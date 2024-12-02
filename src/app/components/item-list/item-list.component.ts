@@ -49,7 +49,7 @@ export class ListComponent implements OnInit, AfterViewInit, OnChanges {
   public displayedColumns: string[] = COLUMNS;
   public dataSource!: MatTableDataSource<ITransaction>
 
-  @Input() items: ITransaction[] | any = []
+  @Input() items: ITransaction[] = []
   @Output() updateValue = new EventEmitter<ITransaction>()
   @Output() deleteValue = new EventEmitter<number>()
 
