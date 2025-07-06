@@ -24,7 +24,7 @@ export default class HomePage implements OnDestroy {
     public dialog: MatDialog,
     private transactionService: TransactionService,
     private viewContainerReference: ViewContainerRef,
-  ) {}
+  ) { }
 
   public handleUpdate(data: ITransaction) {
     this.transactionService.updateData(data);

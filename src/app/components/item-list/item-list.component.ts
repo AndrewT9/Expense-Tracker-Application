@@ -49,18 +49,18 @@ export class ListComponent implements OnInit, AfterViewInit, OnChanges {
   public displayedColumns: string[] = COLUMNS;
   public dataSource!: MatTableDataSource<ITransaction>
 
-  @Input() items: ITransaction[] = []
+  @Input() items: ITransaction[] | null = []
   @Output() updateValue = new EventEmitter<ITransaction>()
   @Output() deleteValue = new EventEmitter<number>()
 
   @ViewChild(MatPaginator) paginator!: MatPaginator
   @ViewChild(MatSort) sort!: MatSort
 
-  constructor() {}
+  constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['items']) {
-      this.dataSource = new MatTableDataSource(this.items)
+      this.dataSource = new MatTableDataSource(this.items!)
       if (this.paginator) {
         this.dataSource.paginator = this.paginator
       }
@@ -71,7 +71,7 @@ export class ListComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngOnInit() {
-    this.dataSource = new MatTableDataSource(this.items)
+    this.dataSource = new MatTableDataSource(this.items!)
   }
 
   ngAfterViewInit() {
