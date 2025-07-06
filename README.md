@@ -6,9 +6,8 @@
 
 Expense Tracker Application is a web application designed to help users track their personal finances. It allows users
 to add and categorize income and expense records, view the total balance (income minus expenses), and filter
-transactions by type and category. All data is stored in localStorage, ensuring persistence even after page reloads.
-Users can also sort transactions by date or amount, making it easy to manage their financial records. The application
-features a clean and responsive design, ensuring a seamless experience on mobile devices.
+transactions by type and category. Users can also sort transactions by date or amount, making it easy to manage their
+financial records.
 
 - **View a paginated table** of transactions (expenses and income), including:
 
@@ -48,9 +47,10 @@ features a clean and responsive design, ensuring a seamless experience on mobile
 git clone https://github.com/AndrewT9/Expense-Tracker-Application.git
 ```
 
-    ```bash
-    npm install
-    ```
-    ```bash
-    ng serve
-    ```
+```bash
+npm install
+```
+
+```bash
+ng serve
+```
